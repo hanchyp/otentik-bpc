@@ -1,0 +1,5 @@
+@import './brand.css';
+@import './components.css';
+@import './motion.css';
+.animated-number{font-variant-numeric:tabular-nums}
+@media(hover:none){.collage-main:hover{transform:rotate(-5deg)}}

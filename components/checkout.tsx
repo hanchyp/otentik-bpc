@@ -1,0 +1,11 @@
+'use client';
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
+import { money, quote, tiers } from '@/lib/data';
+import { purchase, useHydrated } from '@/lib/purchases';
+import type { Tier, Work } from '@/lib/types';
+import { Art, Back, DemoNote, Icon, Rules, Split } from './ui';
+export function Checkout({work:w,tier}: {work:Work;tier:Tier}) {
+  const ready=useHydrated(); const router=useRouter(); const [busy,setBusy]=useState(false); const q=quote(w.id,tier);
+  return <div className="container page checkout-page" data-motion-ready={ready}><Back href={`/karya/${w.id}?tier=${tier}`}>Kembali ke pilihan lisensi</Back><div className="page-heading"><div className="eyebrow">Langkah terakhir</div><h1>Ide siap.<br/><span>Lisensi sesuai.</span></h1><p>Tinjau pilihanmu sebelum mencoba transaksi.</p></div><div className="checkout-layout"><section><div className="checkout-work"><Art work={w}/><div><span className="overline">{w.category} · Contoh karya</span><h2>{w.title}</h2><p>oleh {w.creator}</p><span className="tag">Lisensi {tiers[tier].name}</span></div></div><div className="panel"><h3>Yang termasuk dalam pilihanmu</h3><Rules tier={tier}/><p className="muted">Hak cipta tetap milik kreator. Dokumen yang muncul setelah konfirmasi hanya ringkasan simulasi.</p></div><DemoNote/></section><aside className="panel checkout-total"><h2>Ringkasan simulasi</h2><div className="line-item"><span>Lisensi {tiers[tier].name}</span><strong>{money(q.total)}</strong></div><div className="line-item"><span>Biaya tambahan demo</span><strong>{money(0)}</strong></div><div className="price-row"><span>Total</span><strong>{money(q.total)}</strong></div><Split quote={q}/><form onSubmit={e=>{e.preventDefault();if(busy)return;setBusy(true);const p=purchase(w.id,tier);router.push('/lisensi/'+p.id);}}><label className="consent"><input type="checkbox" required/><span>Saya memahami ini simulasi. Tidak ada pembayaran, unduhan aset berlisensi, atau kontrak nyata.</span></label><button className="button full" type="submit" disabled={busy}>{busy?'Mencatat…':'Konfirmasi simulasi'} <Icon name="arrow"/></button></form><p className="fineprint">Tersimpan hanya di browser ini. Tidak perlu rekening atau kartu pembayaran.</p></aside></div></div>;
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "name": "orbit",
+    "prompt": "Use case: identity-preserve. Asset type: OTENTIK website mascot. Input image is the approved brand board, reference only; preserve the exact Orbit character shown in panel 05, first welcoming pose. Extract/recreate ONLY that single mascot at high resolution on plain fully opaque pure WHITE #FFFFFF background. Thick bright blue #1677FF pixel O ring body, white square opening in center, two small white square eyes ABOVE opening in top blue bar, one golden yellow #FFD447 pixel at top-right corner, dark navy #142640 pixel arms and short feet, right arm raised in a welcoming wave, left arm lowered. Same proportions and crisp square stair-step pixel silhouette as approved reference. Character fills about 70% of square canvas with generous white margin. Flat hard-edged solid colors, no shading, no shadow, no transparency, no text, no board, no layout, no other characters.",
+    "mode": "built-in ImageGen",
+    "path": "C:/Users/farha/Documents/Codex/2026-09-18/co/outputs/website-assets/orbit.png",
+    "source": "C:\\Users\\farha\\.codex\\generated_images\\01a0b525-4af6-7bb1-9941-e7916a4c91f1\\exec-60b339b0-55e4-48f2-8166-ab9d9eb1f60c.png",
+    "provenance": "Approved Orbit mascot reference"
+  },
+  {
+    "name": "tropis",
+    "prompt": "Use case: illustration-story. Asset type: original artwork sample for creative licensing website. Create an original editorial Indonesian-inspired tropical botanical repeat illustration, indigo and vivid cobalt leaves with coral and golden flowers on light off-white background. Flat handprinted premium textile art, nuanced printmaking texture, elegant dense rhythmic botanical composition. Square edge-to-edge artwork with motifs naturally cropped at edges, bright opaque image. No text, letters, logo, watermark, frame or mockup. Contemporary invented artwork, not a reproduction of any traditional motif or cultural artifact.",
+    "mode": "built-in ImageGen",
+    "path": "C:/Users/farha/Documents/Codex/2026-09-18/co/outputs/website-assets/tropis.png",
+    "source": "C:\\Users\\farha\\.codex\\generated_images\\01a0b525-4af6-7bb1-9941-e7916a4c91f1\\exec-d668d64e-52a2-4cf4-be9a-eda97ab525dd.png",
+    "provenance": "AI-generated original demonstration artwork; no traditional provenance claimed"
+  },
+  {
+    "name": "geometris",
+    "prompt": "Use case: stylized-concept. Asset type: original artwork sample for creative licensing website. Create an original contemporary geometric sun and ocean abstract pattern in bold cobalt blue, coral, golden yellow and cream. Use clean interlocking arcs, checkerboards and zigzags with confident scale variation and a polished artistic print aesthetic. Square edge-to-edge image with no margin, bright flat opaque colors with subtle paper print texture. No text, letters, logo, watermark, frame, or mockup. A finished high-quality original art print.",
+    "mode": "built-in ImageGen",
+    "path": "C:/Users/farha/Documents/Codex/2026-09-18/co/outputs/website-assets/geometris.png",
+    "source": "C:\\Users\\farha\\.codex\\generated_images\\01a0b525-4af6-7bb1-9941-e7916a4c91f1\\exec-70f36391-0eaa-436b-a5da-a9048b1e8870.png",
+    "provenance": "AI-generated original demonstration artwork; no traditional provenance claimed"
+  },
+  {
+    "name": "pasar",
+    "prompt": "Use case: illustration-story. Asset type: original artwork sample for creative licensing website. Create an original playful editorial illustration pattern of market fruit: mango, dragonfruit and orange, with lush green leaves in a teal, coral and mango yellow palette on light cream. Bold simplified organic shapes, refined handprinted texture, lively balanced composition with sliced and whole fruit. Square edge-to-edge bright fully opaque image with fruits naturally cropped at edges. No text, letters, logo, watermark, frame or mockup.",
+    "mode": "built-in ImageGen",
+    "path": "C:/Users/farha/Documents/Codex/2026-09-18/co/outputs/website-assets/pasar.png",
+    "source": "C:\\Users\\farha\\.codex\\generated_images\\01a0b525-4af6-7bb1-9941-e7916a4c91f1\\exec-eebbd30b-9e66-43b2-909d-f11689ca09c4.png",
+    "provenance": "AI-generated original demonstration artwork; no traditional provenance claimed"
+  }
+]

@@ -1,0 +1,27 @@
+:root{--motion-ease:cubic-bezier(.22,1,.36,1);--motion-duration:600ms}
+.hero h1>.motion-line{display:block;color:inherit}
+.hero h1>.motion-line>span{color:var(--blue)}
+.hero-collage{translate:0 var(--parallax-y,0px)}
+[data-reveal]{--motion-x:0px;--motion-y:24px}
+[data-reveal=left]{--motion-x:-22px;--motion-y:0px}
+[data-reveal=right]{--motion-x:22px;--motion-y:0px}
+.motion-enter{animation:otentik-reveal var(--motion-duration) var(--motion-ease) var(--motion-delay,0ms) both}
+@keyframes otentik-reveal{from{opacity:0;translate:var(--motion-x) var(--motion-y)}to{opacity:1;translate:0 0}}
+[data-reveal=fill].motion-enter{transform-origin:left;animation-name:otentik-fill}
+@keyframes otentik-fill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+[data-reveal=success].motion-enter{animation-name:otentik-success}
+@keyframes otentik-success{from{opacity:0;translate:-18px 8px;scale:.97}to{opacity:1;translate:0 0;scale:1}}
+.stat>strong,.price-row>strong,.split strong{font-variant-numeric:tabular-nums}
+.art-card,.art-open svg,.button svg,.button,.art-image img{transition:transform 220ms var(--motion-ease),background 180ms ease,border-color 180ms ease}
+@media(hover:hover) and (pointer:fine){
+ .art-card:hover{transform:translateY(-4px)}
+ .art-card:hover .art-open svg,.button:hover svg{transform:translateX(3px)}
+ .button:active{transform:translateY(1px)}
+}
+@media(hover:none){.art-link:hover .art-image img,.art-card:hover .art-image img{transform:none}}
+@media(max-width:800px){.hero-collage{translate:none}[data-reveal]{--motion-y:16px}[data-reveal=left]{--motion-x:-14px;--motion-y:0px}[data-reveal=right]{--motion-x:14px;--motion-y:0px}}
+@media(prefers-reduced-motion:reduce){
+ .motion-enter{animation:none!important;opacity:1!important;translate:none!important}
+ .hero-collage{translate:none!important}
+ .art-card,.button,.art-image img,.art-open svg,.button svg{transition:none!important;transform:none!important}
+}
