@@ -35,6 +35,7 @@ export function Motion() {
       });
     }
     function scan() {
+      if (document.documentElement.hasAttribute('data-intro-active')) return;
       mark('.hero-copy > .eyebrow', 'up', 0);
       mark('.motion-line', 'up', 80, 70);
       mark('.hero-copy > p, .hero-copy > .actions, .hero-note', 'up', 75, 250);
@@ -72,10 +73,12 @@ export function Motion() {
     mutations.observe(root, {childList: true, subtree: true, attributes: true, attributeFilter: ['data-motion-ready']});
     window.addEventListener('scroll', scroll, {passive: true});
     window.addEventListener('resize', scroll, {passive: true});
+    window.addEventListener('otentik:intro-finished', scan);
     reduced.addEventListener('change', preferences); root.addEventListener('focusin', focus);
     return () => {
       observer?.disconnect(); mutations.disconnect(); cancelAnimationFrame(frame);
       window.removeEventListener('scroll', scroll); window.removeEventListener('resize', scroll);
+      window.removeEventListener('otentik:intro-finished', scan);
       reduced.removeEventListener('change', preferences); root.removeEventListener('focusin', focus);
       root.querySelectorAll('.motion-enter').forEach(el => el.classList.remove('motion-enter'));
     };
